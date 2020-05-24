@@ -1,0 +1,94 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Ropa Sans', sans-serif;
+}
+h1 {
+    padding: 0;
+    margin: 0;
+    color: white;
+}
+.wrapper {
+    margin: auto;
+    max-width: 600px;
+    padding-top: 100px;
+    text-align: center;
+    background-color: #F8B195;
+    height: 100%;
+}
+
+button {
+    display: inline;
+    border-radius: 7px;
+    border: none;
+    padding: 6px;
+    background-color: #C06C84;
+
+    color: white;
+
+}
+
+button:hover {
+    background-color: rgb(117, 59, 75);
+}
+
+#app {
+   
+
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+        "nav" 
+        "main";
+    
+    min-height: 100%;
+    height: 100%;
+
+}
+
+nav {
+    grid-area: nav;
+    background-color: maroon;
+    height: 40px;
+    padding-left: 8px;
+    padding-top: 15px;
+
+
+}
+
+main {
+    grid-area: main;
+    height: 100%;
+    overflow: hidden;
+    background-color: #355C7D;
+ 
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+    font-size: 1.5em;
+    
+}
+
+.card {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    padding: 2px 16px;
+    margin: 5px;
+    min-height: 180px;
+    width: 120px;
+    background-color: white;
+
+  }
+  
+  /* On mouse-over, add a deeper shadow */
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+  

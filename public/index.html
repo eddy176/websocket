@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hello</title>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Ropa+Sans&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div id='app'>
+            <nav>
+                <h1> Eddy's Crypto Tracker</h1>
+            </nav>
+            <main>
+                <div class="wrapper">
+                    <select  v-model="messageToSend">
+                        <option selected disabled >Select a Cryptocurrency:</option>
+                        <option value="btc">Bitcoin</option>
+                        <option value="bch">Bitcoin Cash</option>
+                        <option value="eth">Ethereum</option>
+                        <option value="xrp">Ripple</option>
+                        <option value="usdt">Tether</option>
+                    </select>
+               
+                        <button v-on:click="sendMessage">Track</button>
+   
+                    <div class="cards">
+            
+                        <div class="card">
+                            {{ btcincomingMessages }}
+                            <img src="imgs/btc.png">
+                    
+                        </div>
+                        <div class="card">
+                            {{ ethincomingMessages }}
+                            <img src="imgs/eth.png">
+                        </div>
+                        <div class="card">
+                            {{ xrpincomingMessages }}
+                            <img src="imgs/xrp.png">
+                        </div>
+                        <div class="card">
+                            {{ usdtincomingMessages }}
+                            <img src="imgs/usdt.png">
+                        </div>
+                        <div class="card">
+                            {{ bchincomingMessages }}
+                            <img src="imgs/bch.png">
+                        </div>
+                    </div>
+                </div>
+
+            </main>
+
+
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script src="app.js"></script>
+    </body>
+</html>
